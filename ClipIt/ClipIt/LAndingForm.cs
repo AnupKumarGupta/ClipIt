@@ -15,6 +15,18 @@ namespace ClipIt
         public LandingForm()
         {
             InitializeComponent();
+            PutCopiedDataToTextBox();
+        }
+
+        public void PutCopiedDataToTextBox()
+        {
+            rchTxtClipBoardData.Text = Clipboard.GetData(DataFormats.Text).ToString();
+        }
+
+        private void btnSetData_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rchTxtClipBoardData.Text);
+
         }
     }
 }
