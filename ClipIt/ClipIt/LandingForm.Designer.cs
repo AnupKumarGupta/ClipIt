@@ -32,6 +32,7 @@
             this.rchTxtClipBoardData = new System.Windows.Forms.RichTextBox();
             this.groupBoxBtn = new System.Windows.Forms.GroupBox();
             this.btnSetData = new System.Windows.Forms.Button();
+            this.mouseKeyEventProvider1 = new MouseKeyboardActivityMonitor.Controls.MouseKeyEventProvider();
             this.groupBoxText.SuspendLayout();
             this.groupBoxBtn.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,11 @@
             this.btnSetData.UseVisualStyleBackColor = true;
             this.btnSetData.Click += new System.EventHandler(this.btnSetData_Click);
             // 
+            // mouseKeyEventProvider1
+            // 
+            this.mouseKeyEventProvider1.Enabled = false;
+            this.mouseKeyEventProvider1.HookType = MouseKeyboardActivityMonitor.Controls.HookType.Global;
+            // 
             // LandingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,6 +99,7 @@
         private System.Windows.Forms.RichTextBox rchTxtClipBoardData;
         private System.Windows.Forms.GroupBox groupBoxBtn;
         private System.Windows.Forms.Button btnSetData;
+        private MouseKeyboardActivityMonitor.Controls.MouseKeyEventProvider mouseKeyEventProvider1;
 
     }
 }
