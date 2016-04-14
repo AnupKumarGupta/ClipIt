@@ -51,11 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LandingForm.cs">
+    <Compile Include="ClipBoardHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LandingForm.Designer.cs">
-      <DependentUpon>LandingForm.cs</DependentUpon>
+    <Compile Include="ClipBoardHome.Designer.cs">
+      <DependentUpon>ClipBoardHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceFile\CodeTextMapping.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeTextMapping.resx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +70,12 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LandingForm.resx">
-      <DependentUpon>LandingForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClipBoardHome.resx">
+      <DependentUpon>ClipBoardHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFile\CodeTextMapping.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CodeTextMapping.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

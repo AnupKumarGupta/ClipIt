@@ -17,12 +17,13 @@ namespace ClipIt
         public TestForm()
         {
             InitializeComponent();
-            mouseKeyEvntProviderDemo.HookType = MouseKeyboardActivityMonitor.Controls.HookType.Global;
             Activate();
         }
         private KeyboardHookListener m_keyListener;
         public void Activate()
         {
+            mouseKeyEvntProviderDemo.HookType = MouseKeyboardActivityMonitor.Controls.HookType.Global;
+            
             // Note: for an application hook, use the AppHooker class instead
             m_keyListener = new KeyboardHookListener(new GlobalHooker());
 
