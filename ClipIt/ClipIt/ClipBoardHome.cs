@@ -14,7 +14,6 @@ namespace ClipIt
 {
     public partial class ClipBoardHome : Form
     {
-
         #region Variables
 
         private KeyboardHookListener keyListener;
@@ -82,7 +81,7 @@ namespace ClipIt
             if (IsCopyInstructionPassed(e))
             {
                 strStack.Push(Clipboard.GetText());
-
+                
                 if (!(strStack.Peek() == ""))
                     Clipboard.SetText(strStack.Peek());
             }
