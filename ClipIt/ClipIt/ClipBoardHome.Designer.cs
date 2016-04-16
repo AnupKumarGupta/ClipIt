@@ -28,52 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox_TextBox = new System.Windows.Forms.GroupBox();
-            this.txtBoxData = new System.Windows.Forms.RichTextBox();
-            this.mouseKeyEvntProvider = new MouseKeyboardActivityMonitor.Controls.MouseKeyEventProvider();
-            this.groupBox_TextBox.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.cmnuTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctlClipboardText = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // groupBox_TextBox
+            // cmnuTray
             // 
-            this.groupBox_TextBox.Controls.Add(this.txtBoxData);
-            this.groupBox_TextBox.Location = new System.Drawing.Point(12, 12);
-            this.groupBox_TextBox.Name = "groupBox_TextBox";
-            this.groupBox_TextBox.Size = new System.Drawing.Size(108, 95);
-            this.groupBox_TextBox.TabIndex = 0;
-            this.groupBox_TextBox.TabStop = false;
+            this.cmnuTray.Name = "cmnuTray";
+            this.cmnuTray.Size = new System.Drawing.Size(61, 4);
             // 
-            // txtBoxData
+            // ctlClipboardText
             // 
-            this.txtBoxData.Location = new System.Drawing.Point(6, 19);
-            this.txtBoxData.Name = "txtBoxData";
-            this.txtBoxData.Size = new System.Drawing.Size(96, 70);
-            this.txtBoxData.TabIndex = 0;
-            this.txtBoxData.Text = "";
-            // 
-            // mouseKeyEvntProvider
-            // 
-            this.mouseKeyEvntProvider.Enabled = false;
-            this.mouseKeyEvntProvider.HookType = MouseKeyboardActivityMonitor.Controls.HookType.Global;
-            this.mouseKeyEvntProvider.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mouseKeyEvntProvider_KeyDown);
+            this.ctlClipboardText.Location = new System.Drawing.Point(0, -3);
+            this.ctlClipboardText.Name = "ctlClipboardText";
+            this.ctlClipboardText.Size = new System.Drawing.Size(281, 261);
+            this.ctlClipboardText.TabIndex = 1;
+            this.ctlClipboardText.Text = "";
             // 
             // ClipBoardHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(135, 131);
-            this.Controls.Add(this.groupBox_TextBox);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.ctlClipboardText);
             this.Name = "ClipBoardHome";
             this.Text = "ClipBoard";
-            this.groupBox_TextBox.ResumeLayout(false);
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.frmMain_Closing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox_TextBox;
-        private System.Windows.Forms.RichTextBox txtBoxData;
-        private MouseKeyboardActivityMonitor.Controls.MouseKeyEventProvider mouseKeyEvntProvider;
+        private System.Windows.Forms.ContextMenuStrip cmnuTray;
+        private System.Windows.Forms.RichTextBox ctlClipboardText;
     }
 }
+

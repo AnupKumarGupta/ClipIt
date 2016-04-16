@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDC2C6B1-73B9-4FE8-93EF-F2E36FFAAF6E}</ProjectGuid>
+    <ProjectGuid>{B550746D-B591-4415-A72E-6A7853B853FD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClipIt</RootNamespace>
@@ -32,13 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MouseKeyboardActivityMonitor">
-      <HintPath>bin\MouseKeyboardActivityMonitor.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,25 +51,12 @@
     <Compile Include="ClipBoardHome.Designer.cs">
       <DependentUpon>ClipBoardHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResourceFile\CodeTextMapping.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CodeTextMapping.resx</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Shell32.cs" />
+    <Compile Include="User32.cs" />
     <EmbeddedResource Include="ClipBoardHome.resx">
       <DependentUpon>ClipBoardHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResourceFile\CodeTextMapping.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CodeTextMapping.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,9 +67,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
